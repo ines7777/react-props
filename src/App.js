@@ -5,12 +5,12 @@ import Profile from './Profile/Profile';
 
 
 function App() {
-  const alertMyInput = () => alert("my name is ines");
+  const alertMyInput = (name) => alert("my name is ines"+name);
   return (
     <div className="App">
-      <Profile fullName="inesch"  bio="c ines"  profession="ingenieur" />
-      <Profile><img src="/ines.jpeg" /></Profile>
-      <Profile alertMyInput={alertMyInput}/>
+      <Profile fullName="inesch"  bio="c ines"  profession="ingenieur" alertMyInput={alertMyInput} ><img src="/ines.jpeg" /></Profile>
+      
+      
     </div>
   );
 }

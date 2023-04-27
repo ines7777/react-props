@@ -8,7 +8,7 @@ const Profile = (props) => {
       <h1 style={{color:"grey", fontSize:"40px", fontWeight:"bolder"}}>{props.bio}</h1>
       <h1 style={{color:"green", fontSize:"40px", fontWeight:"bolder"}}>{props.profession}</h1>
       <h1>{props.children}</h1>
-      <button onClick={() => props.alertMyInput}>
+      <button onClick={()=>props.alertMyInput(props.fullName)}>
       ClickMe
       </button>
     </div>
@@ -18,7 +18,8 @@ const Profile = (props) => {
 Profile.defaultProps={
     fullName: "maram",
     bio: "c maram",
-    profession: "avocate"
+    profession: "avocate",
+    children: <img src="/logo512.png"/>
 
 }
 
